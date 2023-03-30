@@ -17,14 +17,15 @@
         android:layout_height="wrap_content"
         android:contentDescription="Navigation Header"
         android:paddingTop="8dp"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@mipmap/swagger_logo1_foreground" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
+
         android:text="Swagger"
-        android:textColor="@color/black"
+        android:textColor="@color/swagger"
         android:textAllCaps="true"
         android:textStyle="bold" />
 

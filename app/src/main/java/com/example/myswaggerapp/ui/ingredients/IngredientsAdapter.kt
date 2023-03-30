@@ -5,11 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myswaggerapp.R
+import com.example.myswaggerapp.data.model.housesModel.HousesModelItemModel
 import com.example.myswaggerapp.data.model.ingredientsModel.IngredientsModelItemModel
 import com.example.myswaggerapp.databinding.ItemIngredientsBinding
 
 class IngredientsAdapter(val ingredients: ArrayList<IngredientsModelItemModel>) :
     RecyclerView.Adapter<IngredientsAdapter.ViewHolder>() {
+
+    var onItemClick:  ((IngredientsModelItemModel) -> Unit)? = null
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val binding = ItemIngredientsBinding.bind(view)
@@ -35,11 +38,11 @@ class IngredientsAdapter(val ingredients: ArrayList<IngredientsModelItemModel>) 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.handleData(ingredients?.get(position))
-        //holder.itemView.setOnClickListener {
-        //     houses?.get(position)?.let {
-        //        onItemClick?.invoke(it)
-        //    }
-        // }
+        holder.itemView.setOnClickListener {
+             ingredients?.get(position)?.let {
+                onItemClick?.invoke(it)
+            }
+         }
     }
 
 }

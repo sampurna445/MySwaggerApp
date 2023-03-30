@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 
 
@@ -48,6 +49,16 @@ class SpellsFragment : Fragment() {
         binding.rvSpells.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = spellsAdapter
+        }
+
+        spellsAdapter.onItemClick = {
+            val bundle = Bundle().apply {
+                putSerializable("SpellsItem", it)
+            }
+            findNavController().navigate(
+                R.id.action_nav_spells_to_spells_details, bundle
+
+            )
         }
     }
 

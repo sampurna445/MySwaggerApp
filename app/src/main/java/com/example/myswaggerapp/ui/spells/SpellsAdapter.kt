@@ -12,6 +12,9 @@ import com.example.myswaggerapp.databinding.ItemSpellsBinding
 class SpellsAdapter(val spells: ArrayList<SpellsModelItemModel>) :
     RecyclerView.Adapter<SpellsAdapter.ViewHolder>() {
 
+    var onItemClick: ((SpellsModelItemModel) -> Unit)? = null
+
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val binding = ItemSpellsBinding.bind(view)
 
@@ -37,6 +40,11 @@ class SpellsAdapter(val spells: ArrayList<SpellsModelItemModel>) :
     override fun getItemCount(): Int = spells?.size ?: 0
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.handleData(spells?.get(position))
+        holder.itemView.setOnClickListener {
+            spells?.get(position)?.let {
+                onItemClick?.invoke(it)
+            }
+        }
     }
 
 }

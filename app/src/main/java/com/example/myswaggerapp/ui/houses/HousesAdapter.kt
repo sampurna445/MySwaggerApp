@@ -11,6 +11,8 @@ import com.example.myswaggerapp.databinding.ItemHousesBinding
 class HousesAdapter(val houses: ArrayList<HousesModelItemModel>) :
     RecyclerView.Adapter<HousesAdapter.ViewHolder>() {
 
+    var onItemClick: ((HousesModelItemModel) -> Unit)? = null
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val binding = ItemHousesBinding.bind(view)
 
@@ -34,11 +36,11 @@ class HousesAdapter(val houses: ArrayList<HousesModelItemModel>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.handleData(houses?.get(position))
-         //holder.itemView.setOnClickListener {
-        //     houses?.get(position)?.let {
-        //        onItemClick?.invoke(it)
-        //    }
-        // }
+        holder.itemView.setOnClickListener {
+            houses?.get(position)?.let {
+                onItemClick?.invoke(it)
+            }
+        }
     }
 
 }

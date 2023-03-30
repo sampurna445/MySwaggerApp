@@ -12,4 +12,4 @@ data class WizardsModelItemModel(
     val id: String? = "",
     @SerializedName("lastName")
     val lastName: String? = ""
-)
+):java.io.Serializable

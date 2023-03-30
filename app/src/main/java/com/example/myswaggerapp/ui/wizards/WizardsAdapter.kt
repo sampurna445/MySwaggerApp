@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myswaggerapp.R
+import com.example.myswaggerapp.data.model.ingredientsModel.IngredientsModelItemModel
 import com.example.myswaggerapp.data.model.wizards.WizardsModelItemModel
 
 import com.example.myswaggerapp.databinding.ItemWizardsBinding
@@ -13,6 +14,8 @@ import com.example.myswaggerapp.databinding.ItemWizardsBinding
 class WizardsAdapter(val wizards: ArrayList<WizardsModelItemModel>) :
     RecyclerView.Adapter<WizardsAdapter.ViewHolder>() {
 
+
+    var onItemClick:  ((WizardsModelItemModel) -> Unit)? = null
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val binding = ItemWizardsBinding.bind(view)
@@ -40,6 +43,11 @@ class WizardsAdapter(val wizards: ArrayList<WizardsModelItemModel>) :
 
     override fun onBindViewHolder(holder: WizardsAdapter.ViewHolder, position: Int) {
         holder.handleData(wizards?.get(position))
+        holder.itemView.setOnClickListener {
+            wizards?.get(position)?.let {
+                onItemClick?.invoke(it)
+            }
+        }
     }
 
 

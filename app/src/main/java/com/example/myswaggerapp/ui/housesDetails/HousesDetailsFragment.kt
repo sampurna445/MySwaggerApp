@@ -14,10 +14,12 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class HousesDetailsFragment : Fragment() {
 
+
     private var _binding: FragmentHousesDetailsBinding? = null
     private val binding get() = _binding!!
-
     private lateinit var viewModel: HousesDetailsViewModel
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +35,9 @@ class HousesDetailsFragment : Fragment() {
         binding.housesName.text = house.name
         binding.housesAnimal.text = house.animal
         binding.housesHouseColor.text = house.houseColours
+        binding.housesElement.text = house.element
+        binding.housesGhost.text = house.ghost
+        binding.housesCommonRoom.text = house.commonRoom
 
 
 

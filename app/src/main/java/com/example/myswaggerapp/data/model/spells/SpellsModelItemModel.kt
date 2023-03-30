@@ -20,4 +20,4 @@ data class SpellsModelItemModel(
     val name: String? = "",
     @SerializedName("type")
     val type: String? = ""
-)
+):java.io.Serializable

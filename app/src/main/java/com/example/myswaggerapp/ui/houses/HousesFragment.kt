@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myswaggerapp.R
 
 import com.example.myswaggerapp.data.model.housesModel.HousesModel
 import com.example.myswaggerapp.databinding.FragmentHousesBinding
@@ -46,6 +48,15 @@ class HousesFragment : Fragment() {
         binding.rvHouses.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = housesAdapter
+        }
+        housesAdapter.onItemClick = {
+            val bundle = Bundle().apply {
+                putSerializable("HouseItem", it)
+            }
+            findNavController().navigate(
+                R.id.action_nav_houses_to_houses_Details, bundle
+
+            )
         }
     }
 

@@ -24,4 +24,4 @@ data class HousesModelItemModel(
     val name: String? = "",
     @SerializedName("traits")
     val traits: List<TraitModel?>? = listOf()
-)
+):java.io.Serializable

@@ -44,21 +44,21 @@
     <fragment
         android:id="@+id/houses_Details"
         android:name="com.example.myswaggerapp.ui.housesDetails.HousesDetailsFragment"
-        android:label="fragment_houses__details"
+        android:label="Houses Fragment"
         tools:layout="@layout/fragment_houses__details" />
     <fragment
         android:id="@+id/wizards_details"
-        android:name="com.example.myswaggerapp.ui.wizards.wizards_details"
-        android:label="fragment_wizards_details"
+        android:name="com.example.myswaggerapp.ui.wizards.wizardsDetails.WizardsDetailsFragment"
+        android:label="Wizards Fragment"
         tools:layout="@layout/fragment_wizards_details" />
     <fragment
         android:id="@+id/ingredients_details"
-        android:name="com.example.myswaggerapp.ui.ingredients.ingredients_details"
-        android:label="fragment_ingredients_details"
+        android:name="com.example.myswaggerapp.ui.ingredientsDetails.IngredientsDetailsFragment"
+        android:label="Ingredients Fragment"
         tools:layout="@layout/fragment_ingredients_details" />
     <fragment
         android:id="@+id/spells_details"
-        android:name="com.example.myswaggerapp.ui.spells.spells_details"
-        android:label="fragment_spells_details"
+        android:name="com.example.myswaggerapp.ui.spellsDetails.SpellsDetailsFragment"
+        android:label="Spells Fragment"
         tools:layout="@layout/fragment_spells_details" />
 </navigation>

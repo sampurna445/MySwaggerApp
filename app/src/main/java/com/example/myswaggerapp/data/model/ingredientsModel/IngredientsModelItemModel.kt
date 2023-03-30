@@ -8,4 +8,4 @@ data class IngredientsModelItemModel(
     val id: String? = "",
     @SerializedName("name")
     val name: String? = ""
-)
+):java.io.Serializable

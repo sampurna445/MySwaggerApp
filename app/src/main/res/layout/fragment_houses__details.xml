@@ -38,11 +38,32 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/houses_houseColor"
+            android:id="@+id/houses_ghost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
             android:text="@string/symbol"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/houses_houseColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="@string/housecolorl"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/houses_commonRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="@string/commonroom"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/houses_Element"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="Element"
             android:textStyle="bold" />
 
 

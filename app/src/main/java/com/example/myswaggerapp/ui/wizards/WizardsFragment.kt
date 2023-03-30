@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.example.myswaggerapp.R
@@ -44,6 +45,15 @@ private lateinit var viewModel : WizardsViewModel
         binding.rvWizards.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = wizardsAdapter
+        }
+        wizardsAdapter.onItemClick = {
+            val bundle = Bundle().apply {
+                putSerializable("WizardItem", it)
+            }
+            findNavController().navigate(
+                R.id.action_nav_wizards_to_wizards_details, bundle
+
+            )
         }
     }
 
