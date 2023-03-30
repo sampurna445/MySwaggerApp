@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_houses">
+
+    <fragment
+        android:id="@+id/nav_wizards"
+        android:name="com.example.myswaggerapp.ui.wizards.WizardsFragment"
+        android:label="Wizards"
+        tools:layout="@layout/fragment_wizard" >
+        <action
+            android:id="@+id/action_nav_wizards_to_wizards_details"
+            app:destination="@id/wizards_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_ingredients"
+        android:name="com.example.myswaggerapp.ui.ingredients.IngredientsFragment"
+        android:label="Ingredients"
+        tools:layout="@layout/fragment_ingredients" >
+        <action
+            android:id="@+id/action_nav_ingredients_to_ingredients_details"
+            app:destination="@id/ingredients_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_spells"
+        android:name="com.example.myswaggerapp.ui.spells.SpellsFragment"
+        android:label="Spells"
+        tools:layout="@layout/fragment_spells" >
+        <action
+            android:id="@+id/action_nav_spells_to_spells_details"
+            app:destination="@id/spells_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_houses"
+        android:name="com.example.myswaggerapp.ui.houses.HousesFragment"
+        android:label="Houses"
+        tools:layout="@layout/fragment_houses" >
+        <action
+            android:id="@+id/action_nav_houses_to_houses_Details"
+            app:destination="@id/houses_Details" />
+    </fragment>
+    <fragment
+        android:id="@+id/houses_Details"
+        android:name="com.example.myswaggerapp.ui.housesDetails.HousesDetailsFragment"
+        android:label="fragment_houses__details"
+        tools:layout="@layout/fragment_houses__details" />
+    <fragment
+        android:id="@+id/wizards_details"
+        android:name="com.example.myswaggerapp.ui.wizards.wizards_details"
+        android:label="fragment_wizards_details"
+        tools:layout="@layout/fragment_wizards_details" />
+    <fragment
+        android:id="@+id/ingredients_details"
+        android:name="com.example.myswaggerapp.ui.ingredients.ingredients_details"
+        android:label="fragment_ingredients_details"
+        tools:layout="@layout/fragment_ingredients_details" />
+    <fragment
+        android:id="@+id/spells_details"
+        android:name="com.example.myswaggerapp.ui.spells.spells_details"
+        android:label="fragment_spells_details"
+        tools:layout="@layout/fragment_spells_details" />
+</navigation>

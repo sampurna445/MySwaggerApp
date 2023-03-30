@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MySwaggerApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wizards">Wizards</string>
+    <string name="spells">Spells</string>
+    <string name="houses">Houses</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="symbol">SYMBOL</string>
+    <string name="animal">Animal</string>
+    <string name="name">Name</string>
+    <string name="colour">Colour</string>
+    <string name="id">Id</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+</resources>
